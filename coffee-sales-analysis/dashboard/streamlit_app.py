@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import plotly
 
 df = pd.read_csv("../data/coffee_sales.csv")
 
@@ -18,5 +19,6 @@ filtered_df = df[df['store_location'] == store]
 hourly_sales = filtered_df.groupby('hour')['revenue'].sum().reset_index()
 
 fig = px.line(hourly_sales, x='hour', y='revenue', title="Hourly Revenue Trend")
+
 
 st.plotly_chart(fig)
