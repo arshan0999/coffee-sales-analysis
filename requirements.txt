@@ -1,7 +1,6 @@
-streamlit
-pandas
-plotly=5.22.0
-matploylib
-seaborn
-
-numpy
+streamlit==1.35.0
+pandas==2.2.2
+plotly==5.22.0
+matploylib==3.8.4
+seaborn==0.13.2
+numpy==1.26.4
