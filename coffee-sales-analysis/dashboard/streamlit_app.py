@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
 import plotly
+import plotly.express as px
 
 df = pd.read_csv("../data/coffee_sales.csv")
 
@@ -22,3 +22,4 @@ fig = px.line(hourly_sales, x='hour', y='revenue', title="Hourly Revenue Trend")
 
 
 st.plotly_chart(fig)
+
